@@ -1,4 +1,4 @@
-import Algoritmo
+from classes.Algoritmo import Algoritmo
 
 
 class Alocador:
