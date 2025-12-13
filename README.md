@@ -70,10 +70,10 @@ O objetivo principal é **didático**, permitindo analisar o impacto de cada alg
 
 
 ### Inicialização
-- [ ] `init(int tamanho)`
-    - [ ] Inicializa a memória física simulada
-    - [ ] Cria o primeiro bloco livre
-    - [ ] Impede operações antes da inicialização
+- [x] `init(int tamanho)`
+    - [x] Inicializa a memória física simulada
+    - [x] Cria o primeiro bloco livre
+    - [x] Impede operações antes da inicialização
 
 
 ### Alocação de Memória
