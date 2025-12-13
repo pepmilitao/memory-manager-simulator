@@ -1,4 +1,4 @@
-# Simulador  de Gerência de Memória -- Alocação Dinâmica
+# Simulador  de Gerência de Memória - Alocação Dinâmica
 
 ## Índice
 
