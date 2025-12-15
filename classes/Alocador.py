@@ -1,4 +1,5 @@
 from classes.Algoritmo import Algoritmo
+from classes.Byte import Byte
 
 
 class Alocador:
@@ -8,9 +9,6 @@ class Alocador:
     """
 
     def __init__(self):
-        self.tam_mem = tamanho
-        self.memoria = list[Byte] = []
-        self.prox_id = 1
         self.inicializado = False
 
     def init(self, tamanho: int) -> None:
@@ -26,16 +24,34 @@ class Alocador:
         self.inicializado = True
 
     # Aloca bloco na memória
-    def alloc(self, tamanho: int, alg: Algoritmo) -> None:
-        print("TODO")
+    def alloc(self, tamanho: int, alg: Algoritmo) -> bool:
+        ret = alg.procura_bloco_livre(self.memoria, tamanho, self.prox_id, True)
+        self.prox_id += 1
+        if ret == -1:
+            return False
+        return True
 
     # Libera bloco com base em um id
-    def free_id(self, id: int) -> None:
-        print("TODO")
+    def free_id(self, id: int) -> bool:
+        i = 0
+        while i < len(self.memoria):
+            if self.memoria[i].id == id:
+                for j in range(i, i + self.memoria[i].tam):
+                    self.memoria[i].reset()
+                return True
+            i += 1
+        return False
+                    
 
     # Escolhe o bloco ideal sem alocar ele
-    def choose_block(self, tamanho: int, alg: Algoritmo) -> None:
-        print("TODO")
+    def choose_block(self, tamanho: int, alg: Algoritmo) -> dict:
+        idx = alg.procura_bloco_livre(self.memoria, tamanho, self.prox_id, False)
+        ret = {
+            "id": self.prox_id,
+            "idx_ini": idx,
+            "tam": tamanho
+        }
+        return ret
 
     # Exibe estado atual do bloco em duas linhas: uso físico e id's
     def show(self) -> None:

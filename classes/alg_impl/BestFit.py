@@ -12,15 +12,15 @@ class BestFit(Algoritmo):
         livres excessivamente grandes.
     """
 
-    def procura_bloco_livre(self, mem: list[Byte], tam_bloco: int, id: int) -> int:
-         """
-            Procura o menor bloco livre possível e realiza a alocação diretamente na estrutura de memória.
+    def procura_bloco_livre(self, mem: list[Byte], tam_bloco: int, id: int, alocar: bool) -> int:
+        """
+           Procura o menor bloco livre possível e realiza a alocação diretamente na estrutura de memória.
 
-            :param mem: Lista que representa a memória física simulada.
-            :param tam_bloco: Tamanho do bloco a ser alocado.
-            :param id: Identificador único do bloco alocado.
-            :return: Índice inicial do bloco alocado ou -1 caso não exista espaço.
-         """
+           :param mem: Lista que representa a memória física simulada.
+           :param tam_bloco: Tamanho do bloco a ser alocado.
+           :param id: Identificador único do bloco alocado.
+           :return: Índice inicial do bloco alocado ou -1 caso não exista espaço.
+        """
         i = 0
         min_idx_ini = -1
         min_tam_possivel = len(mem) + 1
@@ -48,4 +48,4 @@ class BestFit(Algoritmo):
                 mem[i].idx_ini = min_idx_ini
                 mem[i].tam = tam_bloco
             return min_idx_ini
-        return min_idx_ini
+        return -1
