@@ -3,8 +3,25 @@ from classes.Byte import Byte
 
 
 class WorstFit(Algoritmo):
+    s WorstFit(Algoritmo):
+        """
+            Implementação do algoritmo Worst Fit para alocação dinâmica de memória.
+
+            A estratégia consiste em percorrer toda a memória simulada em busca do
+            maior bloco livre disponível e utilizá-lo para a alocação, buscando
+            minimizar a criação de pequenos fragmentos livres.
+        """
 
     def procura_bloco_livre(self, mem: list[Byte], tam_bloco: int, id: int) -> int:
+         """
+            Procura o maior bloco livre disponível e realiza a alocação caso o
+            espaço seja suficiente para o tamanho solicitado.
+
+            :param mem: Lista que representa a memória física simulada.
+            :param tam_bloco: Tamanho do bloco a ser alocado.
+            :param id: Identificador único do bloco alocado.
+            :return: Índice inicial do bloco alocado ou -1 caso não exista espaço.
+         """
         i = 0
         max_idx_ini = -1
         max_tam_possivel = -1

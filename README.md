@@ -70,10 +70,10 @@ O objetivo principal é **didático**, permitindo analisar o impacto de cada alg
 
 
 ### Inicialização
-- [ ] `init(int tamanho)`
-    - [ ] Inicializa a memória física simulada
-    - [ ] Cria o primeiro bloco livre
-    - [ ] Impede operações antes da inicialização
+- [x] `init(int tamanho)`
+    - [x] Inicializa a memória física simulada
+    - [x] Cria o primeiro bloco livre
+    - [x] Impede operações antes da inicialização
 
 
 ### Alocação de Memória
@@ -84,10 +84,10 @@ O objetivo principal é **didático**, permitindo analisar o impacto de cada alg
     - [ ] Atribui um identificador único ao bloco alocado
 
 
-- [ ] `choose_block(int tamanho, FitAlg algoritmo)`
-    - [ ] Implementa a lógica do First Fit
-    - [ ] Implementa a lógica do Best Fit
-    - [ ] Implementa a lógica do Worst Fit
+- [x] `choose_block(int tamanho, FitAlg algoritmo)`
+    - [x] Implementa a lógica do First Fit
+    - [x] Implementa a lógica do Best Fit
+    - [x] Implementa a lógica do Worst Fit
 
 
 ### Liberação de Memória
