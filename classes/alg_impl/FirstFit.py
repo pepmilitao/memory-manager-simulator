@@ -11,7 +11,7 @@ class FirstFit(Algoritmo):
         requisição.
     """
 
-    def procura_bloco_livre(self, mem: list[Byte], tam_bloco: int, id: int) -> int:
+    def procura_bloco_livre(self, mem: list[Byte], tam_bloco: int, id: int, alocar: bool) -> int:
         """
             Procura o primeiro bloco livre e realiza a alocação imediatamente após encontrá-lo.
 

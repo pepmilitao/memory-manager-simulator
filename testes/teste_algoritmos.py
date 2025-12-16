@@ -25,11 +25,11 @@ def testa_algoritmos():
     first_fit = FirstFit()
 
     print("BestFit:")
-    print(best_fit.procura_bloco_livre(mem, 3, 2))
+    print(best_fit.procura_bloco_livre(mem, 3, 2, True))
     print("WorstFit:")
-    print(worst_fit.procura_bloco_livre(mem, 3, 3))
+    print(worst_fit.procura_bloco_livre(mem, 3, 3, True))
     print("FirstFit:")
-    print(first_fit.procura_bloco_livre(mem, 3, 4))
+    print(first_fit.procura_bloco_livre(mem, 3, 4, True))
 
     for elem in mem:
         print(f"id: {elem.id}; idx_ini: {elem.idx_ini}; tam: {elem.tam}")
@@ -44,11 +44,11 @@ def testa_algoritmos():
 
     print("\nCenário 2: Falha na alocação")
     print("BestFit:")
-    print(best_fit.procura_bloco_livre(mem, 3, 10))  # Tentando alocar um bloco de tamanho 3
+    print(best_fit.procura_bloco_livre(mem, 3, 10, True))  # Tentando alocar um bloco de tamanho 3
     print("WorstFit:")
-    print(worst_fit.procura_bloco_livre(mem, 3, 11))  # Tentando alocar um bloco de tamanho 3
+    print(worst_fit.procura_bloco_livre(mem, 3, 11, True))  # Tentando alocar um bloco de tamanho 3
     print("FirstFit:")
-    print(first_fit.procura_bloco_livre(mem, 3, 12))  # Tentando alocar um bloco de tamanho 3
+    print(first_fit.procura_bloco_livre(mem, 3, 12, True))  # Tentando alocar um bloco de tamanho 3
 
     for elem in mem:
         print(f"id: {elem.id}; idx_ini: {elem.idx_ini}; tam: {elem.tam}")
