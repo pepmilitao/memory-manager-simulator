@@ -77,11 +77,11 @@ O objetivo principal é **didático**, permitindo analisar o impacto de cada alg
 
 
 ### Alocação de Memória
-- [ ] `alloc(int tamanho, FitAlg algoritmo)`
-    - [ ] Localiza um bloco livre adequado
-    - [ ] Aplica o algoritmo selecionado (First, Best ou Worst Fit)
-    - [ ] Divide o bloco quando necessário
-    - [ ] Atribui um identificador único ao bloco alocado
+- [x] `alloc(int tamanho, FitAlg algoritmo)`
+    - [x] Localiza um bloco livre adequado
+    - [x] Aplica o algoritmo selecionado (First, Best ou Worst Fit)
+    - [x] Divide o bloco quando necessário
+    - [x] Atribui um identificador único ao bloco alocado
 
 
 - [x] `choose_block(int tamanho, FitAlg algoritmo)`
@@ -91,26 +91,26 @@ O objetivo principal é **didático**, permitindo analisar o impacto de cada alg
 
 
 ### Liberação de Memória
-- [ ] `free_id(int id)`
-    - [ ] Localiza o bloco pelo identificador
-    - [ ] Marca o bloco como livre
-    - [ ] Realiza coalescência com blocos adjacentes
+- [x] `free_id(int id)`
+    - [x] Localiza o bloco pelo identificador
+    - [x] Marca o bloco como livre
+    - [x] Realiza coalescência com blocos adjacentes
 
 
 ### Visualização
-- [ ] `show()`
-    - [ ] Exibe o mapa físico da memória (`#` e `.`)
-    - [ ] Exibe os identificadores dos blocos
-    - [ ] Mantém alinhamento proporcional ao tamanho da memória
+- [x] `show()`
+    - [x] Exibe o mapa físico da memória (`#` e `.`)
+    - [x] Exibe os identificadores dos blocos
+    - [x] Mantém alinhamento proporcional ao tamanho da memória
 
 
 ### Estatísticas
-- [ ] `stats()`
-    - [ ] Calcula memória total
-    - [ ] Calcula memória ocupada e livre
-    - [ ] Identifica buracos (fragmentação externa)
-    - [ ] Calcula fragmentação interna
-    - [ ] Exibe taxa de uso efetivo da memória
+- [x] `stats()`
+    - [x] Calcula memória total
+    - [x] Calcula memória ocupada e livre
+    - [x] Identifica buracos (fragmentação externa)
+    - [x] Calcula fragmentação interna
+    - [x] Exibe taxa de uso efetivo da memória
 
 ---
 
