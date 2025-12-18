@@ -53,6 +53,7 @@ O objetivo principal é **didático**, permitindo analisar o impacto de cada alg
 │   └── Byte.py
 ├── testes/
 │   └── teste_algoritmos.py
+├── main.py
 └── README.md
 ```
 
