@@ -1,7 +1,9 @@
+from abc import ABC, abstractmethod
 from classes.Byte import Byte
 
 
-class Algoritmo:
+class Algoritmo(ABC):
 
+    @abstractmethod
     def procura_bloco_livre(self, mem: list[Byte], tam_bloco: int, id: int, alocar: bool) -> int:
-        print("Ops! Error durante a execução do algoritmo. Método não implementado.")
+        pass
